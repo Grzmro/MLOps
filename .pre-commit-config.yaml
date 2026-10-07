@@ -6,7 +6,6 @@ repos:
         args: [--fix]
       - id: ruff-format
 
-  # monitor code complexity
   - repo: https://github.com/rubik/xenon
     rev: v0.9.3
     hooks:
