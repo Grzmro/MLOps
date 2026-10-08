@@ -5,9 +5,21 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "fastapi>=0.143.0",
     "pre-commit>=4.6.2",
     "pydantic-settings>=2.15.0",
     "python-dotenv>=1.2.4",
     "pyyaml>=6.0.3",
+    "uvicorn>=0.54.0",
     "xenon>=0.9.3",
 ]
+
+[dependency-groups]
+dev = [
+    "httpx>=0.28.1",
+    "pytest>=9.1.1",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
