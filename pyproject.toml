@@ -10,6 +10,7 @@ dependencies = [
     "pydantic-settings>=2.15.0",
     "python-dotenv>=1.2.4",
     "pyyaml>=6.0.3",
+    "scikit-learn>=1.9.1",
     "uvicorn>=0.54.0",
     "xenon>=0.9.3",
 ]
