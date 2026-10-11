@@ -31,8 +31,8 @@ def test_sentence_transformer_loads_without_errors():
 @pytest.mark.parametrize(
     "text",
     [
-        "What a great MLOps lecture, I am very satisfied",
-        "This is terrible, I hated every minute",
+        "Great!!!",
+        "shit!!!",
         "The lecture was on Monday",
     ],
 )
