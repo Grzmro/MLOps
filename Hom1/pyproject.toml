@@ -1,0 +1,36 @@
+[project]
+name = "hom1"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Grzmro", email = "grzegorzmroz555@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "clean-text>=0.7.1",
+    "joblib>=1.6.0",
+    "scikit-learn>=1.9.1",
+    "sentence-transformers>=6.1.0",
+    "torch>=2.14.1",
+]
+
+[project.scripts]
+hom1 = "hom1:main"
+
+[build-system]
+requires = ["uv_build>=0.12.23,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
+
+[tool.uv.sources]
+torch = [{ index = "pytorch-cu132" }]
+
+[[tool.uv.index]]
+name = "pytorch-cu132"
+url = "https://download.pytorch.org/whl/cu132"
+explicit = true
