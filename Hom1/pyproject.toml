@@ -11,22 +11,15 @@ dependencies = [
     "clean-text>=0.7.1",
     "fastapi>=0.143.0",
     "joblib>=1.6.0",
-    "scikit-learn>=1.9.1",
+    "scikit-learn==1.7.2",
     "sentence-transformers>=6.1.0",
     "torch>=2.14.1",
     "uvicorn>=0.54.0",
 ]
 
-[project.scripts]
-hom1 = "hom1:main"
-
-[build-system]
-requires = ["uv_build>=0.12.23,<0.13.0"]
-build-backend = "uv_build"
-
 [dependency-groups]
 dev = [
-    "httpx>=0.28.1",
+    "httpx2>=2.13.1",
     "mypy>=2.4.0",
     "pytest>=9.1.1",
     "ruff>=0.17.0",
@@ -39,3 +32,13 @@ torch = [{ index = "pytorch-cu132" }]
 name = "pytorch-cu132"
 url = "https://download.pytorch.org/whl/cu132"
 explicit = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.mypy]
+[[tool.mypy.overrides]]
+module = ["joblib"]
+ignore_missing_imports = true
+
