@@ -11,3 +11,13 @@ repos:
     hooks:
       - id: xenon
         args: ['--max-absolute=B', '--max-modules=B', '--max-average=A']
+
+  - repo: local
+    hooks:
+      - id: mypy
+        name: mypy
+        entry: bash -c 'cd Hom1 && uv run mypy --explicit-package-bases .'
+        language: system
+        types: [python]
+        files: ^Hom1/
+        pass_filenames: false
